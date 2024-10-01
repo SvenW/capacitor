@@ -65,10 +65,10 @@ export function TerraformResourceWidget(props) {
         <span className="bg-orange-400">
           <span>Last Attempted: </span>
           {/* <span>{lastAttemptedRevision}@{version.chartName}</span> */}
-          {/* <span>
-            {tfRelease.spec.chart.spec.version}@
-            {tfRelease.spec.chart.spec.chart}
-          </span> */}
+          <span>
+            {tfRelease.status.lastAttemptedRevision}@
+            {tfRelease.status.lastPlanAt}
+          </span>
         </span>
       )}
       <span
